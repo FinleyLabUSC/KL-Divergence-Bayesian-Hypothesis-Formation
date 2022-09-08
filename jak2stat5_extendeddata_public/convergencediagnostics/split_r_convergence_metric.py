@@ -19,6 +19,10 @@ def qqplot(posteriorsamples):
         if i == 0:
             plt.ylabel('Sample Quantiles')
             plt.xlabel('Theoretical Quantiles')
+        plt.xlim([-3.1, 3.1])
+        plt.xticks(np.arange(-3,4))
+        plt.ylim([-3.1, 3.1])
+        plt.yticks(np.arange(-3, 4))
     plt.savefig('convergencediagnostics/qq_plots_ln(posterior)/Q_Q_Plot_group1.png', dpi=150)
     plt.close(fig)
 
@@ -36,6 +40,10 @@ def qqplot(posteriorsamples):
         if i == 0+11:
             plt.ylabel('Sample Quantiles')
             plt.xlabel('Theoretical Quantiles')
+        plt.xlim([-3.1, 3.1])
+        plt.xticks(np.arange(-3,4))
+        plt.ylim([-3.1, 3.1])
+        plt.yticks(np.arange(-3, 4))
     plt.savefig('convergencediagnostics/qq_plots_ln(posterior)/Q_Q_Plot_group2.png', dpi=150)
     plt.close(fig)
 
@@ -53,6 +61,10 @@ def qqplot(posteriorsamples):
         if i == 0+22:
             plt.ylabel('Sample Quantiles')
             plt.xlabel('Theoretical Quantiles')
+        plt.xlim([-3.1, 3.1])
+        plt.xticks(np.arange(-3,4))
+        plt.ylim([-3.1, 3.1])
+        plt.yticks(np.arange(-3, 4))
     plt.savefig('convergencediagnostics/qq_plots_ln(posterior)/Q_Q_Plot_group3.png', dpi=150)
     plt.close(fig)
 

@@ -9,9 +9,9 @@ def shape_classification(socs_simulations):
     sustained = []
     early_peak_and_transient = []
     indicator = []
-    socs_simulations_5hrs = socs_simulations[:, 0:int(5*3600/20)]
+    socs_simulations_4hrs = socs_simulations[:, 0:int(4*3600/20)]
     for i in np.arange(0, len(socs_simulations[:, 1])):
-        peaks_index = find_peaks(socs_simulations_5hrs[i, :])[0]
+        peaks_index = find_peaks(socs_simulations_4hrs[i, :])[0]
         if peaks_index.size == 0 and socs_simulations[i, int(24*3600/20)] > 0.5:
             indicator.append(0)
             no_peak_and_sustained.append(socs_simulations[i, :])
@@ -65,9 +65,9 @@ def adjustable_shape_classification(socs_simulations, short_term_criterion, long
     sustained = []
     early_peak_and_transient = []
     indicator = []
-    socs_simulations_5hrs = socs_simulations[:, 0:int(short_term_criterion*3600/20)]
+    socs_simulations_4hrs = socs_simulations[:, 0:int(short_term_criterion*3600/20)]
     for i in np.arange(0, len(socs_simulations[:, 1])):
-        peaks_index = find_peaks(socs_simulations_5hrs[i, :])[0]
+        peaks_index = find_peaks(socs_simulations_4hrs[i, :])[0]
         if peaks_index.size == 0 and socs_simulations[i, int(24*3600/20)] > long_term_criterion:
             indicator.append(0)
             no_peak_and_sustained.append(socs_simulations[i, :])
